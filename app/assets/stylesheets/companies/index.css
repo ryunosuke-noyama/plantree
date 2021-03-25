@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  background-color:honeydew;
+}
+
+.main {
+  width: 100vw;
+  height: 90vh;
+  padding: 2vh 2vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_header {
+  font-size: 25px;
+  color:darkolivegreen;
+}
+
+.companies_list {
+  width: 94vw;
+  height: 65vh;
+  background-color: white;
+  border: 2px solid darkolivegreen;
+  overflow: scroll;
+}
+
+.company_name {
+  font-size: 25px;
+  color:darkolivegreen;
+  background-color: white;
+  margin-left: 10px;
+}
+
+.add_company {
+  margin-left: 10px;
+}
