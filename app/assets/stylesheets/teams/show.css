@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  background-color:honeydew;
+}
+
+.main {
+  width: 100vw;
+  height: 90vh;
+  padding: 2vh 2vw;
+  display: flex;
+}
+
+.team_main {
+  width:25vw;
+  height: 50vh;
+  padding: 2vh 2vw;
+  flex-direction: column;
+}
+
+.plan_main {
+  width: 65vw;
+  height: 90vh;
+  padding: 2vh 2vw;
+  flex-direction: column;
+}
+
+.main_header {
+  font-size: 25px;
+  color:darkolivegreen;
+}
+
+table {
+  width: 100%;
+  height: 40vh;
+  background-color: white;
+  border: 2px solid darkolivegreen;
+  overflow: scroll;
+}
+
+thead {
+  width: 96%;
+  background-color: white;
+  border-bottom: 2px solid darkolivegreen;
+  display: block;
+}
+
+tbody{
+  width: 100%;
+  height: 60vh;
+  background-color: white;
+  display: block;
+  overflow-y:scroll;
+}
+
+th {
+  width: 150px;
+  height: 100%;
+  font-size: 25px;
+  color:darkolivegreen;
+  border-left: 1px solid darkolivegreen;
+  border-right: 1px solid darkolivegreen;
+  background-color: white;
+  text-decoration: none;
+  padding: 0px 10px;
+  margin-left: 10px;
+}
+
+td {
+  width: 150px;
+  height: 100%;
+  font-size: 25px;
+  color:darkolivegreen;
+  border-left: 1px solid darkolivegreen;
+  border-right: 1px solid darkolivegreen;
+  background-color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.btn {
+  font-size: 25px;
+  color:darkolivegreen;
+  font-weight: bold;
+  margin-left: 10px;
+  text-decoration: none;
+}

@@ -3,12 +3,10 @@
   background-color:honeydew;
 }
 
-.main {
+.company_main {
   width: 100vw;
   height: 90vh;
   padding: 2vh 2vw;
-  display: flex;
-  flex-direction: column;
 }
 
 .main_header {
@@ -24,13 +22,18 @@
   overflow: scroll;
 }
 
-.company_name {
+.list {
   font-size: 25px;
   color:darkolivegreen;
   background-color: white;
   margin-left: 10px;
+  text-decoration: none;
 }
 
-.add_company {
+.btn {
+  font-size: 25px;
+  color:darkolivegreen;
+  font-weight: bold;
   margin-left: 10px;
+  text-decoration: none;
 }

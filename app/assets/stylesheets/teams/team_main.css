@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  background-color:honeydew;
+}
+
+.main {
+  width: 100vw;
+  height: 90vh;
+  padding: 1vh 1vw;
+  display: flex;
+}
+
+.team_main {
+  width:25vw;
+  height: 50vh;
+  padding: 2vh 2vw;
+  flex-direction: column;
+}
+
+.main_header {
+  font-size: 25px;
+  color:darkolivegreen;
+}
+
+.team_table {
+  width: 100%;
+  height: 40vh;
+  background-color: white;
+  border: 2px solid darkolivegreen;
+  overflow: scroll;
+}
+
+.team_thead {
+  width: 96%;
+  background-color: white;
+  border-bottom: 2px solid darkolivegreen;
+  display: block;
+}
+
+.team_tbody{
+  width: 100%;
+  height: 60vh;
+  background-color: white;
+  display: block;
+  overflow-y:scroll;
+}
+
+.team_th {
+  width: 100vw;
+  height: 100%;
+  font-size: 25px;
+  color:darkolivegreen;
+  background-color: white;
+  text-decoration: none;
+  padding: 0px 10px;
+  margin-left: 10px;
+}
+
+.team_td {
+  width: 100vw;
+  height: 100%;
+  font-size: 25px;
+  color:darkolivegreen;
+  background-color: white;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.form-team_name {
+  width: 100%;
+  height: 25px;
+  background-color: white;
+  border: 2px solid darkolivegreen;
+  margin-top: 5px;
+}
+
+.form-submit {
+  background-color: darkolivegreen;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+  margin-left: 5px;
+  padding: 0 20px;
+  margin-top: 5px;
+}

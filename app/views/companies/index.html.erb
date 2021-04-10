@@ -1,0 +1,17 @@
+<%= render "shared/header1" %>
+
+<div class= 'company_main'>
+  <h1 class= 'main_header'>Company List</h1>
+  <ul class= 'companies_list'>
+    <% if @companies.present?%>
+    <% @companies.each do |company|%>
+      <li class='list'>
+        <%= link_to company.company_name, company_path(company.id)%>
+      </li>
+    <% end %>
+    <% else %>
+      登録なし
+    <% end %>
+  </ul>
+  <%= link_to '+Company', new_company_path, class: 'btn'%>
+</div>

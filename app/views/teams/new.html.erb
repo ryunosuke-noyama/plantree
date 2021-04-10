@@ -1,0 +1,12 @@
+<%= render "shared/header1" %>
+
+<div class= 'team_main'>
+  <h1 class= 'main_header'>+Team</h1>
+  <%= form_with model: [@company,@team], class: 'form', local: true do |f| %>
+    <div class="form-input">
+      <%= f.text_field :team_name, class: 'form-company', placeholder: 'type a team name' , autocomplete: 'off'%>
+    </div>
+    <%= f.submit '追加', class: 'form-submit' %>
+    <%= link_to 'Back', root_path, class: 'btn'%>
+  <% end %>
+</div>
