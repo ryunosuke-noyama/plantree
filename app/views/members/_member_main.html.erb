@@ -1,0 +1,23 @@
+<div class= 'member_main'>
+    <h1 class= 'main_header'>Member List</h1>
+    <table class= "member_table">
+      <thead class= "member_thead">
+        <tr>
+          <th class= "member_th">member_name</th>
+        </tr>
+      </thead>
+   
+      <tbody class= "member_tbody">
+        <% if @company.members.present?%>
+          <% @company.members.each do |member|%>
+          <tr >
+            <td class= "member_td"><%= link_to member.member_name, "/"%></td>
+          </tr>
+          <% end %>
+        <% else %>
+          <td class= "member_td">登録なし</td>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to '+Member', new_company_member_path(@company), class: 'btn'%>
+  </div>

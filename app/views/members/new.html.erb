@@ -1,0 +1,12 @@
+<%= render "shared/header1" %>
+
+<div class= 'member_main'>
+  <h1 class= 'main_header'>+Member</h1>
+  <%= form_with model: [@company,@member], class: 'form', local: true do |f| %>
+    <div class="form-input">
+      <%= f.text_field :member_name, class: 'form-company', placeholder: 'type a member name' , autocomplete: 'off'%>
+    </div>
+    <%= f.submit '追加', class: 'form-submit' %>
+    <%= link_to 'Back', root_path, class: 'btn'%>
+  <% end %>
+</div>
