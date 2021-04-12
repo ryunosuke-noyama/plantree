@@ -11,7 +11,7 @@
         <% if @company.members.present?%>
           <% @company.members.each do |member|%>
           <tr >
-            <td class= "member_td"><%= link_to member.member_name, "/"%></td>
+            <td class= "member_td"><%= link_to member.member_name, company_member_path(@company,member.id)%></td>
           </tr>
           <% end %>
         <% else %>
