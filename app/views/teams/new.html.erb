@@ -7,11 +7,11 @@
       <%= f.text_field :team_name, class: 'form-company', placeholder: 'type a team name' , autocomplete: 'off'%>
     </div>
     <div class='member_select'>
-      <%= collection_check_boxes(:team,:member_ids, Member.all, :id, :member_name ) do |member| %>
+      <%= collection_check_boxes(:team,:member_ids, @company.members, :id, :member_name ) do |member| %>
         <%= member.label { member.check_box + member.text } %>
       <% end %>
     </div>
     <%= f.submit '追加', class: 'form-submit' %>
-    <%= link_to 'Back', root_path, class: 'btn'%>
+    <%= link_to 'Back', company_path(@company), class: 'btn'%>
   <% end %>
 </div>

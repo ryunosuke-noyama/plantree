@@ -34,6 +34,12 @@ class TeamsController < ApplicationController
     end
   end
 
+  def destroy
+    @company = Company.find(params[:company_id])
+    @team = Team.find(params[:id])
+    @team.destroy
+  end
+
   private
   def team_params
     params.require(:team).permit(:team_name, member_ids:[]).merge(company_id: @company.id)

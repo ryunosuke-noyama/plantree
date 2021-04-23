@@ -11,7 +11,7 @@
         <% if @company.teams.present?%>
           <% @company.teams.each do |team|%>
           <tr >
-            <td class= "team_td"><%= link_to team.team_name, company_team_path(@company,team.id)%></td>
+            <td class= "team_td"><%= link_to team.team_name, company_team_path(@company,team.id)%> <%= link_to '削除', company_team_path(@company,team.id), method: :delete %></td>
           </tr>
           <% end %>
         <% else %>
