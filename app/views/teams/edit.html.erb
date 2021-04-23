@@ -1,29 +1,18 @@
 <%= render "shared/header1" %>
 
 <div class= 'main'>
-  <div class= 'member_main'>
-      <h1 class= 'main_header'>Member List</h1>
-      <table class= "member_table">
-        <thead class= "member_thead">
-          <tr>
-              <th class= "member_th">member_name</th>
-          </tr>
-        </thead>
-   
-        <tbody class= "member_tbody">
-          <% if @team.members.present?%>
-            <% @team.members.each do |member|%>
-              <tr >
-                <td class= "member_td"><%= link_to member.member_name, "/"%></td>
-              </tr>
-            <% end %>
-          <% else %>
-            <td class= "member_td">登録なし</td>
-          <% end %>
-        </tbody>
-      </table>
-      <%= link_to 'edit Member', edit_company_team_path, class: 'btn'%>
+  <div class= 'team_main'>
+  <h1 class= 'main_header'>edit Team</h1>
+  <%= form_with model: [@company,@team], class: 'form', local: true do |f| %>
+    <div class='member_select'>
+      <%= collection_check_boxes(:team,:member_ids, Member.all, :id, :member_name ) do |member| %>
+        <%= member.label { member.check_box + member.text } %>
+      <% end %>
     </div>
+    <%= f.submit '編集', class: 'form-submit' %>
+    <%= link_to 'Back', root_path, class: 'btn'%>
+  <% end %>
+</div>
     <div class= 'plan_main'>
       <h1 class= 'main_header'>Plan List</h1>
       <table >

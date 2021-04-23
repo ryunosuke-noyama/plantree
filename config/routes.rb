@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "companies#index"
   resources :companies, only: [:index, :new, :create, :show] do
-    resources :teams, only: [:new, :create, :show]
+    resources :teams, only: [:new, :create, :show, :edit, :update]
     resources :members, only: [:new, :create, :show]
   end
   #get       'companies_with_password/:id', to: 'companies#companies_with_password'

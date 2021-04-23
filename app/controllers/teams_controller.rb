@@ -19,8 +19,23 @@ class TeamsController < ApplicationController
     @team = Team.find(params[:id])
   end
 
+  def edit
+    @company = Company.find(params[:company_id])
+    @team = Team.find(params[:id])
+  end
+
+  def update
+    @company = Company.find(params[:company_id])
+    @team = Team.find(params[:id])
+    if @team.update(team_params)
+      redirect_to company_team_path(@company,@team.id)
+    elsif 
+      render :edit
+    end
+  end
+
   private
   def team_params
-    params.require(:team).permit(:team_name).merge(company_id: @company.id)
+    params.require(:team).permit(:team_name, member_ids:[]).merge(company_id: @company.id)
   end
 end
