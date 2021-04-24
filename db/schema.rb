@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_12_130552) do
+ActiveRecord::Schema.define(version: 2021_04_24_024631) do
 
   create_table "companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "company_name", null: false
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(version: 2021_04_12_130552) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["company_id"], name: "index_members_on_company_id"
+  end
+
+  create_table "plans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "plan_name"
+    t.bigint "company_id"
+    t.bigint "team_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_plans_on_company_id"
+    t.index ["team_id"], name: "index_plans_on_team_id"
   end
 
   create_table "team_members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -58,6 +68,8 @@ ActiveRecord::Schema.define(version: 2021_04_12_130552) do
   end
 
   add_foreign_key "members", "companies"
+  add_foreign_key "plans", "companies"
+  add_foreign_key "plans", "teams"
   add_foreign_key "team_members", "members"
   add_foreign_key "team_members", "teams"
   add_foreign_key "teams", "companies"
